@@ -100,7 +100,7 @@ social:
 # Analytics
 # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#analytics
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          : "G-2W8H5B3DPZ"
     anonymize_ip         : # true, false (default)
