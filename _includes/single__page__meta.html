@@ -1,0 +1,23 @@
+{% assign document = post | default: page %}
+{% if document.show_date %}
+  <p class="page__meta">
+    {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+    {% if document.date %}
+    {% assign date = document.date %}
+    <span class="page__meta-date">
+      <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+      Created:
+      <time datetime="{{ date | date_to_xmlschema }}">{{ date | date: date_format }}</time>
+    </span>
+    {% endif %}
+
+    {% if document.last_modified_at %}
+    {% assign last_modified_at = document.last_modified_at %}
+    <span class="page__meta-date">
+      <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+      Updated:
+      <time datetime="{{ last_modified_at | date_to_xmlschema }}">{{ last_modified_at | date: date_format }}</time>
+    </span>
+    {% endif %}
+  </p>
+{% endif %}
