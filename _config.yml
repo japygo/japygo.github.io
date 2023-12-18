@@ -303,6 +303,8 @@ defaults:
       share: false
       related: false
       show_date: true # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#post-dates
+      toc: true
+      toc_sticky: true
 #      mathjax: true
 
   # _pages
