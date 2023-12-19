@@ -299,7 +299,7 @@ defaults:
       layout: single
       author_profile: false
       read_time: false # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#reading-time
-      comments: # true # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#comments
+      comments: true # true # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#comments
       share: false
       related: false
       show_date: true # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#post-dates
