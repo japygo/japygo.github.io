@@ -1,5 +1,14 @@
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 
+{% assign urls = site.posts | map: 'url' | jsonify %}
+<script>
+  const urls = {{ urls }}
+
+  function goToRandomPost() {
+    window.location.href = urls[Math.floor(Math.random() * urls.length)]
+  }
+</script>
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -17,6 +26,9 @@
               <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
           {%- endfor -%}
+          <li class="masthead__menu-item">
+            <a href="#" onclick="goToRandomPost()">Random</a>
+          </li>
         </ul>
         {% if site.search == true %}
         <button class="search__toggle" type="button">
